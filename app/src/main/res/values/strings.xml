@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">VKclient</string>
+    <string name="news">News</string>
+    <string name="post">Post</string>
+    <string name="press_back_to_exit">Please tap BACK again to exit</string>
+    <string name="no_internet_connection">No Internet connection</string>
+    <string name="check_connection">Check your Internet connection to continue.</string>
+    <string name="reload">Reload</string>
+    <string name="logout">Logout</string>
+    <string name="error">Something wrong happened. Try to check Internet connection.</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VKclient</string>
+    <string name="news">Новости</string>
+    <string name="post">Подробно</string>
+    <string name="reload">Попробовать снова</string>
+    <string name="check_connection">Подключитесь к Интернету, чтобы продолжить.</string>
+    <string name="no_internet_connection">Нет соединения с Интернетом.</string>
+    <string name="press_back_to_exit">Нажмите BACK второй раз, чтобы выйти.</string>
+    <string name="logout">Разлогиниться</string>
+    <string name="error">Что-то пошло не так. Проверьте связь с Интернетом.</string>
+</resources>

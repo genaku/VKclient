@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="webErrorPad">20dp</dimen>
+    <dimen name="avatar_size">50dp</dimen>
+    <dimen name="repost_delimiter_width">3dp</dimen>
+</resources>
