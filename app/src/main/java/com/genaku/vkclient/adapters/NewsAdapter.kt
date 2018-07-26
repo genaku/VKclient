@@ -13,6 +13,7 @@ class NewsAdapter(
 ) : CompositePagedListAdapter<UIPostData>(
         delegatesHolder = AdapterDelegatesHolder.Builder<UIPostData>()
                 .setEmptyViewType(NewsViewType.PLACEHOLDER)
+                .add(NewsViewType.PLACEHOLDER, PlaceholderAdapterDelegate())
                 .add(NewsViewType.POST, PostAdapterDelegate(glideRequest, onClick))
                 .add(NewsViewType.REPOST, RepostAdapterDelegate(glideRequest, onClick))
                 .build(),
