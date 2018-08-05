@@ -1,16 +1,13 @@
 package com.genaku.vkclient.viewmodel
 
-import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import com.genaku.domain.GetNewsUseCase
 import com.genaku.domain.NewsUseCase
-import com.genaku.domain.interfaces.presenters.INewsPresenter
 import com.genaku.domain.interfaces.IRepository
 import com.genaku.domain.interfaces.presenters.IGetNewsPresenter
+import com.genaku.domain.interfaces.presenters.INewsPresenter
 import com.genaku.interactor.GetNewsInteractor
 import com.genaku.interactor.NewsInteractor
-import com.genaku.presenter.GetNewsPresenter
-import com.genaku.presenter.NewsPresenter
 import com.genaku.vkclient.VkApplication
 import com.genaku.vkclient.paging.PagedListLiveDataFactory
 
@@ -22,7 +19,7 @@ class NewsViewModel(repository: IRepository) : ViewModel(), INewsPresenter, IGet
 
     private val dataSourceInteractor = GetNewsInteractor(GetNewsUseCase(
             repository = VkApplication.diCompanion.repository,
-            presenter = GetNewsPresenter(this)
+            presenter = this
     ))
 
     //OBSERVABLES
@@ -35,7 +32,7 @@ class NewsViewModel(repository: IRepository) : ViewModel(), INewsPresenter, IGet
     val interactor = NewsInteractor(
             NewsUseCase(
                     repository = repository,
-                    presenter = NewsPresenter(this)
+                    presenter = this
             )
     )
 

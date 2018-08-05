@@ -5,7 +5,6 @@ import com.genaku.domain.StartUseCase
 import com.genaku.domain.interfaces.IRepository
 import com.genaku.domain.interfaces.presenters.IStartPresenter
 import com.genaku.interactor.StartInteractor
-import com.genaku.presenter.StartPresenter
 
 /**
  * Created by Gena Kuchergin on 21.07.2018.
@@ -21,7 +20,7 @@ class StartViewModel(repository: IRepository) : ViewModel(), IStartPresenter {
     val interactor = StartInteractor(
             StartUseCase(
                     repository = repository,
-                    presenter = StartPresenter(this)
+                    presenter = this
             )
     )
 

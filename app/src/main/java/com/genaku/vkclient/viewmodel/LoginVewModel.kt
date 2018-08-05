@@ -2,10 +2,9 @@ package com.genaku.vkclient.viewmodel
 
 import android.arch.lifecycle.ViewModel
 import com.genaku.domain.LoginUseCase
-import com.genaku.domain.interfaces.presenters.ILoginPresenter
 import com.genaku.domain.interfaces.IRepository
+import com.genaku.domain.interfaces.presenters.ILoginPresenter
 import com.genaku.interactor.LoginInteractor
-import com.genaku.presenter.LoginPresenter
 
 /**
  * Created by Gena Kuchergin on 22.07.2018.
@@ -17,7 +16,7 @@ class LoginVewModel(repository: IRepository) : ViewModel(), ILoginPresenter {
     val openNewsEvent = SingleLiveEvent<Boolean>()
     //OBSERVABLES
 
-    val interactor = LoginInteractor(LoginUseCase(repository, LoginPresenter(this)))
+    val interactor = LoginInteractor(LoginUseCase(repository, this))
 
     override fun openNews() {
         openNewsEvent.postValue(true)
